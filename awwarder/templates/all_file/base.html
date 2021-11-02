@@ -1,0 +1,35 @@
+{% load bootstrap4%}
+{% load static%}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8">
+
+  {% if title %}
+  <title>awward - {{title}}</title>
+  {% else %}
+    <title>awward</title>
+  {% endif %}
+  {% block styles %}
+  {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/basenews.css' %}">
+  {% endblock %}
+
+</head>
+<body>
+  
+     {% include "navbar.html" %}
+    {% block content %} 
+    <img src="https://graphicriver.img.customer.envatousercontent.com/files/245961895/GR_Banner_590px+(00395).jpg?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=590&s=2265409c47cbf8106fb196a7f14cc710" style="width:1400px;height:550px"> 
+    <h1 class='text-center'><u>posted project</h1></u> 
+    <br><br>
+    {%endblock%}
+    {% block scripts %}
+ 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     {% bootstrap_javascript %}
+    {% endblock %}
+</body>
+</html>
