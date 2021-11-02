@@ -1,0 +1,19 @@
+{%extends 'all-file/base.html'%}
+
+{% block content %}
+{{block.super}}
+
+<div class="container">
+    <div class="row">
+
+
+        <p>{{profile.bio}}</p>
+       
+
+        <img src="{{profile.profile_image.url}}" class="w3-circle" alt=" alt=" style="height:100px;border-radius: 50%">
+
+
+    </div>
+</div>
+
+{% endblock %}
